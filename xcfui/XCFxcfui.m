@@ -55,14 +55,32 @@
     NSString *filePath = [XCFxcfui currentWorkspaceDocument].workspace.representingFilePath.fileURL.path;
     NSString *projectDirectory = [filePath stringByDeletingLastPathComponent];
     
-    NSTask *task = [[NSTask alloc] init];
-    task.launchPath = @"/usr/bin/ruby";
-    NSString *scriptPath = [self.bundle pathForResource:@"add_phase" ofType:@"rb"];
-    task.arguments = @[scriptPath, filePath, projectDirectory];
-    [task launch];
+    // Add build phase
+    NSTask *addPhaseTask = [[NSTask alloc] init];
+    addPhaseTask.launchPath = @"/usr/bin/ruby";
+    NSString *addScriptPath = [self.bundle pathForResource:@"add_phase" ofType:@"rb"];
+    addPhaseTask.arguments = @[addScriptPath, filePath, projectDirectory];
+    [addPhaseTask launch];
+    [addPhaseTask waitUntilExit];
+    
+    // Build project
+    NSTask *buildTask = [[NSTask alloc] init];
+    buildTask.launchPath = @"/usr/bin/xcodebuild";
+    [buildTask launch];
+    [buildTask waitUntilExit];
+    
+    // Remove build phase
+    NSTask *removePhaseTask = [[NSTask alloc] init];
+    removePhaseTask.launchPath = @"/usr/bin/ruby";
+    NSString *removeScriptPath = [self.bundle pathForResource:@"remove_phase" ofType:@"rb"];
+    removePhaseTask.arguments = @[removeScriptPath, filePath, projectDirectory];
+    [removePhaseTask launch];
+    [removePhaseTask waitUntilExit];
+
 }
 
 + (IDEWorkspaceDocument *)currentWorkspaceDocument {
+    
     NSWindowController *currentWindowController = [[NSApp mainWindow] windowController];
     id document = [currentWindowController document];
     if (currentWindowController && [document isKindOfClass:NSClassFromString(@"IDEWorkspaceDocument")]) {
