@@ -52,40 +52,14 @@
 
 - (void)menuItemFindUnusedImportsOnClick:(NSMenuItem *)menuItem {
     
-    NSString *filePath = [[XCFxcfui currentWorkspaceDocument].workspace.representingFilePath.fileURL path];
-    NSLog(@"%@\n", filePath);
+    NSString *filePath = [XCFxcfui currentWorkspaceDocument].workspace.representingFilePath.fileURL.path;
     NSString *projectDirectory = [filePath stringByDeletingLastPathComponent];
-    NSLog(@"%@\n", projectDirectory);
     
-    if (menuItem.state == NSOnState) {
-        menuItem.state = NSOffState;
-    } else {
-        menuItem.state = NSOnState;
-        
-        NSTask *task = [[NSTask alloc] init];
-        [task setLaunchPath: @"/usr/bin/ruby"];
-        NSString *scriptPath = [self.bundle pathForResource:@"add_phase" ofType:@"rb"];
-        NSLog(@"%@\n", scriptPath);
-        NSArray *arguments = @[scriptPath, filePath, projectDirectory];
-        [task setArguments: arguments];
-        
-        NSPipe *pipe = [NSPipe pipe];
-        task.standardOutput = pipe;
-        
-        NSFileHandle *file = [pipe fileHandleForReading];
-        
-        [task launch];
-        
-        NSData *data = [file readDataToEndOfFile];
-        
-        NSString *returnValue = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-        NSLog (@"grep returned:\n%@", returnValue);
-    }
-    
-    /*
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Hello, World" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [alert runModal];
-     */
+    NSTask *task = [[NSTask alloc] init];
+    task.launchPath = @"/usr/bin/ruby";
+    NSString *scriptPath = [self.bundle pathForResource:@"add_phase" ofType:@"rb"];
+    task.arguments = @[scriptPath, filePath, projectDirectory];
+    [task launch];
 }
 
 + (IDEWorkspaceDocument *)currentWorkspaceDocument {
