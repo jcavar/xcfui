@@ -17,7 +17,6 @@
 @interface DVTFilePath : NSObject
 
 @property (readonly) NSURL *fileURL;
-@property (readonly) DVTFileDataType *fileDataTypePresumed;
 
 @end
 
@@ -30,6 +29,12 @@
 @interface IDEWorkspaceDocument : NSDocument
 
 @property (readonly) IDEWorkspace *workspace;
+
+@end
+
+@interface NSObject (XCFAdditions)
+
+- (void)buildReplaceActiveRunContext:(id)arg;
 
 @end
 

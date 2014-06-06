@@ -5,6 +5,6 @@ phases = main_target.shell_script_build_phases
 phases.each { |phase|
     if (phase.name == "Find unused imports")
         phase.remove_from_project
-        project.save()
     end
 }
+project.save()

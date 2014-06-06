@@ -1,303 +1,636 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		C7182DE0192ABAF500C36303 /* remove_phase.rb in Resources */ = {isa = PBXBuildFile; fileRef = C7182DDF192ABAF500C36303 /* remove_phase.rb */; };
-		C7A5F8B5193F712600EAF99F /* fui_script.sh in Resources */ = {isa = PBXBuildFile; fileRef = C7A5F8B4193F712600EAF99F /* fui_script.sh */; };
-		C7B9EA601928D569000BA694 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B9EA5F1928D569000BA694 /* AppKit.framework */; };
-		C7B9EA621928D569000BA694 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7B9EA611928D569000BA694 /* Foundation.framework */; };
-		C7B9EA681928D569000BA694 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7B9EA661928D569000BA694 /* InfoPlist.strings */; };
-		C7B9EA6B1928D569000BA694 /* XCFxcfui.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B9EA6A1928D569000BA694 /* XCFxcfui.m */; };
-		C7B9EA731929322F000BA694 /* add_phase.rb in Resources */ = {isa = PBXBuildFile; fileRef = C7B9EA721929322F000BA694 /* add_phase.rb */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		C7182DDF192ABAF500C36303 /* remove_phase.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = remove_phase.rb; sourceTree = "<group>"; };
-		C7A5F8B4193F712600EAF99F /* fui_script.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = fui_script.sh; sourceTree = "<group>"; };
-		C7B9EA5C1928D569000BA694 /* xcfui.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xcfui.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7B9EA5F1928D569000BA694 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		C7B9EA611928D569000BA694 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C7B9EA651928D569000BA694 /* xcfui-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xcfui-Info.plist"; sourceTree = "<group>"; };
-		C7B9EA671928D569000BA694 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C7B9EA691928D569000BA694 /* XCFxcfui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XCFxcfui.h; sourceTree = "<group>"; };
-		C7B9EA6A1928D569000BA694 /* XCFxcfui.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XCFxcfui.m; sourceTree = "<group>"; };
-		C7B9EA6C1928D569000BA694 /* xcfui-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xcfui-Prefix.pch"; sourceTree = "<group>"; };
-		C7B9EA721929322F000BA694 /* add_phase.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = add_phase.rb; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		C7B9EA591928D569000BA694 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7B9EA601928D569000BA694 /* AppKit.framework in Frameworks */,
-				C7B9EA621928D569000BA694 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		C7B9EA531928D569000BA694 = {
-			isa = PBXGroup;
-			children = (
-				C7B9EA631928D569000BA694 /* xcfui */,
-				C7B9EA5E1928D569000BA694 /* Frameworks */,
-				C7B9EA5D1928D569000BA694 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		C7B9EA5D1928D569000BA694 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7B9EA5C1928D569000BA694 /* xcfui.xcplugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7B9EA5E1928D569000BA694 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C7B9EA5F1928D569000BA694 /* AppKit.framework */,
-				C7B9EA611928D569000BA694 /* Foundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C7B9EA631928D569000BA694 /* xcfui */ = {
-			isa = PBXGroup;
-			children = (
-				C7B9EA691928D569000BA694 /* XCFxcfui.h */,
-				C7B9EA6A1928D569000BA694 /* XCFxcfui.m */,
-				C7B9EA641928D569000BA694 /* Supporting Files */,
-			);
-			path = xcfui;
-			sourceTree = "<group>";
-		};
-		C7B9EA641928D569000BA694 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7182DDF192ABAF500C36303 /* remove_phase.rb */,
-				C7B9EA721929322F000BA694 /* add_phase.rb */,
-				C7B9EA651928D569000BA694 /* xcfui-Info.plist */,
-				C7B9EA661928D569000BA694 /* InfoPlist.strings */,
-				C7B9EA6C1928D569000BA694 /* xcfui-Prefix.pch */,
-				C7A5F8B4193F712600EAF99F /* fui_script.sh */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		C7B9EA5B1928D569000BA694 /* xcfui */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7B9EA6F1928D569000BA694 /* Build configuration list for PBXNativeTarget "xcfui" */;
-			buildPhases = (
-				C7B9EA581928D569000BA694 /* Sources */,
-				C7B9EA591928D569000BA694 /* Frameworks */,
-				C7B9EA5A1928D569000BA694 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = xcfui;
-			productName = xcfui;
-			productReference = C7B9EA5C1928D569000BA694 /* xcfui.xcplugin */;
-			productType = "com.apple.product-type.bundle";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		C7B9EA541928D569000BA694 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = XCF;
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Josip Cavar";
-			};
-			buildConfigurationList = C7B9EA571928D569000BA694 /* Build configuration list for PBXProject "xcfui" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = C7B9EA531928D569000BA694;
-			productRefGroup = C7B9EA5D1928D569000BA694 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				C7B9EA5B1928D569000BA694 /* xcfui */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		C7B9EA5A1928D569000BA694 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7B9EA681928D569000BA694 /* InfoPlist.strings in Resources */,
-				C7182DE0192ABAF500C36303 /* remove_phase.rb in Resources */,
-				C7A5F8B5193F712600EAF99F /* fui_script.sh in Resources */,
-				C7B9EA731929322F000BA694 /* add_phase.rb in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		C7B9EA581928D569000BA694 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7B9EA6B1928D569000BA694 /* XCFxcfui.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C7B9EA661928D569000BA694 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C7B9EA671928D569000BA694 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		C7B9EA6D1928D569000BA694 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		C7B9EA6E1928D569000BA694 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		C7B9EA701928D569000BA694 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xcfui/xcfui-Prefix.pch";
-				INFOPLIST_FILE = "xcfui/xcfui-Info.plist";
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xcplugin;
-			};
-			name = Debug;
-		};
-		C7B9EA711928D569000BA694 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = "$(HOME)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "xcfui/xcfui-Prefix.pch";
-				INFOPLIST_FILE = "xcfui/xcfui-Info.plist";
-				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xcplugin;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		C7B9EA571928D569000BA694 /* Build configuration list for PBXProject "xcfui" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7B9EA6D1928D569000BA694 /* Debug */,
-				C7B9EA6E1928D569000BA694 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7B9EA6F1928D569000BA694 /* Build configuration list for PBXNativeTarget "xcfui" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7B9EA701928D569000BA694 /* Debug */,
-				C7B9EA711928D569000BA694 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = C7B9EA541928D569000BA694 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>26E9590565E547558422CD73</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Find unused imports</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>/bin/sh "/Users/josip04/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh" "/Users/josip04/Documents/github/xcfui"</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>C7182DDF192ABAF500C36303</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.ruby</string>
+			<key>path</key>
+			<string>remove_phase.rb</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7182DE0192ABAF500C36303</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7182DDF192ABAF500C36303</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7A5F8B4193F712600EAF99F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>fui_script.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7A5F8B5193F712600EAF99F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7A5F8B4193F712600EAF99F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7B9EA531928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7B9EA631928D569000BA694</string>
+				<string>C7B9EA5E1928D569000BA694</string>
+				<string>C7B9EA5D1928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA541928D569000BA694</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>XCF</string>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Josip Cavar</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>C7B9EA571928D569000BA694</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>C7B9EA531928D569000BA694</string>
+			<key>productRefGroup</key>
+			<string>C7B9EA5D1928D569000BA694</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>C7B9EA5B1928D569000BA694</string>
+			</array>
+		</dict>
+		<key>C7B9EA571928D569000BA694</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C7B9EA6D1928D569000BA694</string>
+				<string>C7B9EA6E1928D569000BA694</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C7B9EA581928D569000BA694</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C7B9EA6B1928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C7B9EA591928D569000BA694</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C7B9EA601928D569000BA694</string>
+				<string>C7B9EA621928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C7B9EA5A1928D569000BA694</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C7B9EA681928D569000BA694</string>
+				<string>C7182DE0192ABAF500C36303</string>
+				<string>C7A5F8B5193F712600EAF99F</string>
+				<string>C7B9EA731929322F000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C7B9EA5B1928D569000BA694</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>C7B9EA6F1928D569000BA694</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C7B9EA581928D569000BA694</string>
+				<string>C7B9EA591928D569000BA694</string>
+				<string>C7B9EA5A1928D569000BA694</string>
+				<string>26E9590565E547558422CD73</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>xcfui</string>
+			<key>productName</key>
+			<string>xcfui</string>
+			<key>productReference</key>
+			<string>C7B9EA5C1928D569000BA694</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>C7B9EA5C1928D569000BA694</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>xcfui.xcplugin</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C7B9EA5D1928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7B9EA5C1928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA5E1928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7B9EA5F1928D569000BA694</string>
+				<string>C7B9EA611928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA5F1928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C7B9EA601928D569000BA694</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7B9EA5F1928D569000BA694</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7B9EA611928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>C7B9EA621928D569000BA694</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7B9EA611928D569000BA694</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7B9EA631928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7B9EA691928D569000BA694</string>
+				<string>C7B9EA6A1928D569000BA694</string>
+				<string>C7B9EA641928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>xcfui</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA641928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7182DDF192ABAF500C36303</string>
+				<string>C7B9EA721929322F000BA694</string>
+				<string>C7B9EA651928D569000BA694</string>
+				<string>C7B9EA661928D569000BA694</string>
+				<string>C7B9EA6C1928D569000BA694</string>
+				<string>C7A5F8B4193F712600EAF99F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA651928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>xcfui-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA661928D569000BA694</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C7B9EA671928D569000BA694</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA671928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA681928D569000BA694</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7B9EA661928D569000BA694</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7B9EA691928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>XCFxcfui.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA6A1928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>XCFxcfui.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA6B1928D569000BA694</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7B9EA6A1928D569000BA694</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C7B9EA6C1928D569000BA694</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>xcfui-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA6D1928D569000BA694</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C7B9EA6E1928D569000BA694</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C7B9EA6F1928D569000BA694</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>C7B9EA701928D569000BA694</string>
+				<string>C7B9EA711928D569000BA694</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C7B9EA701928D569000BA694</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>DEPLOYMENT_LOCATION</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>$(HOME)</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>xcfui/xcfui-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>xcfui/xcfui-Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>/Library/Application Support/Developer/Shared/Xcode/Plug-ins</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xcplugin</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>C7B9EA711928D569000BA694</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>DEPLOYMENT_LOCATION</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>$(HOME)</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>xcfui/xcfui-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>xcfui/xcfui-Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>/Library/Application Support/Developer/Shared/Xcode/Plug-ins</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xcplugin</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>C7B9EA721929322F000BA694</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.ruby</string>
+			<key>path</key>
+			<string>add_phase.rb</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C7B9EA731929322F000BA694</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C7B9EA721929322F000BA694</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>C7B9EA541928D569000BA694</string>
+</dict>
+</plist>
