@@ -1,0 +1,3 @@
+[submodule "fui"]
+	path = fui
+	url = https://github.com/dblock/fui.git
