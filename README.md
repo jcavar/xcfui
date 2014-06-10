@@ -3,11 +3,13 @@
 Xcode plugin for [fui tool](https://github.com/dblock/fui)
 
 ##Installation
+
 ###Dependencies
 To use this plugin following gems are required:
 *	[xcodeproj](https://rubygems.org/gems/xcodeproj)
 *	[fui](http://rubygems.org/gems/fui)
 Please install this dependencies first.
+
 ###Plugin
 To install plugin download this, open Xcode project and run.
 ##Usage
