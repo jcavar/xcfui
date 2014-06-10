@@ -17,7 +17,8 @@ To install plugin download this, open Xcode project and run.
 ##Usage
 
 If you want to use xcfui just check 'Find unused imports' item under File menu, if you no longer want to use it just uncheck item
-![Preview](https://raw.githubusercontent.com/jcavar/xcfui/master/fui_preview.png)
+![Preview on](https://raw.githubusercontent.com/jcavar/xcfui/master/fui_preview_on.png)
+![Preview off](https://raw.githubusercontent.com/jcavar/xcfui/master/fui_preview_off.png)
 ##How it works
 
 *	We first add 'Find unused imports' item in Xcode File menu. 
