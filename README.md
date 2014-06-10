@@ -16,6 +16,7 @@ To install plugin download this, open Xcode project and run.
 
 ##Usage
 
+![Alt text](/path/to/img.jpg)
 ##How it works
 
 *	We first add 'Find unused imports' item in Xcode File menu. 
