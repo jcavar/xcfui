@@ -102,8 +102,6 @@
 				C7B9EA581928D569000BA694 /* Sources */,
 				C7B9EA591928D569000BA694 /* Frameworks */,
 				C7B9EA5A1928D569000BA694 /* Resources */,
-				26E9590565E547558422CD73 /* Find unused imports */,
-				C7A4B9DD19476B5B00AF1992 /* Install dependencies */,
 			);
 			buildRules = (
 			);
@@ -154,37 +152,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		26E9590565E547558422CD73 /* Find unused imports */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Find unused imports";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"/Users/josip04/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh\" \"/Users/josip04/Documents/github/xcfui\"";
-		};
-		C7A4B9DD19476B5B00AF1992 /* Install dependencies */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Install dependencies";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "gem install xcodeproj";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C7B9EA581928D569000BA694 /* Sources */ = {

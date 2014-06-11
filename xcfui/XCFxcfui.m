@@ -88,7 +88,6 @@ static NSBundle *bundle;
 + (IDEWorkspaceDocument *)currentWorkspaceDocument {
     
     NSWindowController *currentWindowController = [[NSApp mainWindow] windowController];
-    NSLog(@"controller %@", [currentWindowController description]);
     id document = [currentWindowController document];
     if (currentWindowController && [document isKindOfClass:NSClassFromString(@"IDEWorkspaceDocument")]) {
         return (IDEWorkspaceDocument *)document;
@@ -102,18 +101,13 @@ static NSBundle *bundle;
 
 - (void)buildReplaceActiveRunContext:(id)arg {
     
-    NSLog(@"tu sam");
     BOOL findOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"findOn"];
     if (findOn) {
         [self turnOnFind];
     } else {
         [self turnOffFind];
     }
-    
-    // we just added new build phase and we need some time to save project
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self buildReplaceActiveRunContext:arg];
-    });
+    [self buildReplaceActiveRunContext:arg];
 }
 
 - (void)turnOnFind {
