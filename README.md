@@ -2,6 +2,8 @@
 
 Xcode plugin for [fui tool](https://github.com/dblock/fui)
 
+![Preview](https://raw.githubusercontent.com/jcavar/xcfui/master/preview.png)
+
 ##Installation
 
 ###Dependencies
