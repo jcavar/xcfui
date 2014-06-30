@@ -4,7 +4,7 @@ Xcode plugin for [fui tool](https://github.com/dblock/fui)
 
 ![Preview](https://raw.githubusercontent.com/jcavar/xcfui/master/preview.png)
 
-##Installation
+##Install
 
 ###Dependencies
 To use this plugin following gems are required:
@@ -14,7 +14,15 @@ To use this plugin following gems are required:
 Please install this dependencies first.
 
 ###Plugin
-To install plugin download this, open Xcode project and run.
+
+####Alcatraz
+xcfui is available via [alcatraz](http://alcatraz.io/) 
+
+####Manual
+To install plugin download zip, open Xcode project and run. Restart Xcode.
+
+##Uninstall
+If you want to remove plugin delete xcfui.xcplugin from ~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/ folder and restart Xcode.
 
 ##Usage
 
