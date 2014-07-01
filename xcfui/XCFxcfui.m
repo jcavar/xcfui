@@ -104,6 +104,7 @@ static NSBundle *bundle;
 
 @end
 
+// NSObject category which contain build replacement method
 @implementation NSObject (XCFAdditions)
 
 - (void)buildReplaceActiveRunContext:(id)arg {
