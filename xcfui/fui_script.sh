@@ -10,7 +10,7 @@ if [ $# -eq 0 ]
     then
         echo No arguments supplied. Please pass the project path
     else
-        UNUSED_CLASSES=`fui --path=$1 find`
+        UNUSED_CLASSES=`fui --path="$1" find`
         if [ -z "$UNUSED_CLASSES" ]
             then
                 echo No unused imports
