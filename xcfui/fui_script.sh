@@ -17,7 +17,7 @@ if [ $# -eq 0 ]
             else
                 while read line;
                 do
-                    echo $line 1:1: warning: Unused import
+                    echo $line:1:1: warning: Unused import
                 done <<< "$UNUSED_CLASSES"
         fi
 fi

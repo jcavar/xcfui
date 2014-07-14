@@ -10,6 +10,29 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>B2C85DA3C71A4683B361633A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Find unused imports</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>/bin/sh "/Users/josip04/Library/Application Support/Developer/Shared/Xcode/Plug-ins/xcfui.xcplugin/Contents/Resources/fui_script.sh" "/Users/josip04/Documents/github/xcfui"</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
 		<key>C7182DDF192ABAF500C36303</key>
 		<dict>
 			<key>fileEncoding</key>
@@ -169,6 +192,7 @@
 				<string>C7B9EA581928D569000BA694</string>
 				<string>C7B9EA591928D569000BA694</string>
 				<string>C7B9EA5A1928D569000BA694</string>
+				<string>B2C85DA3C71A4683B361633A</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
