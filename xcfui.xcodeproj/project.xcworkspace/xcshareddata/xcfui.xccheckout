@@ -14,7 +14,7 @@
 		<string>https://github.com/jcavar/xcfui.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>xcfui.xcodeproj/project.xcworkspace</string>
+	<string>xcfui.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>535918AB1C7BCC6AEE267D687D7C145E89B3C8A7</key>

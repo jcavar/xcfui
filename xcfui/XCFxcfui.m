@@ -53,6 +53,8 @@ static NSBundle *bundle;
 - (id)initWithBundle:(NSBundle *)plugin {
     
     if (self = [super init]) {
+        
+        NSLog(@"XCFUI plugin did load");
         bundle = plugin;
         NSMenuItem *menuItemFile = [[NSApp mainMenu] itemWithTitle:@"File"];
         if (menuItemFile) {
@@ -125,7 +127,12 @@ static NSBundle *bundle;
     [backgroundQueue addOperationWithBlock:^{
         
         NSString *filePath = [XCFxcfui currentWorkspaceDocument].workspace.representingFilePath.fileURL.path;
+        filePath = [filePath stringByReplacingOccurrencesOfString:@".xcworkspace" withString:@".xcodeproj"];
+        NSLog(@"XCFUI file path = %@", filePath);
+
         NSString *projectDirectory = [filePath stringByDeletingLastPathComponent];
+        NSLog(@"XCFUI project directory = %@", projectDirectory);
+
         // Add build phase
         NSTask *addPhaseTask = [[NSTask alloc] init];
         addPhaseTask.launchPath = @"/usr/bin/ruby";
