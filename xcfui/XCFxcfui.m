@@ -56,25 +56,28 @@ static NSBundle *bundle;
         
         NSLog(@"XCFUI plugin did load");
         bundle = plugin;
-        NSMenuItem *menuItemFile = [[NSApp mainMenu] itemWithTitle:@"File"];
-        if (menuItemFile) {
-            [menuItemFile.submenu addItem:[NSMenuItem separatorItem]];
-            self.menuItemUnusedImports = [[NSMenuItem alloc] initWithTitle:@"Find unused imports" action:@selector(menuItemFindUnusedImportsOnClick:) keyEquivalent:@""];
-            [self.menuItemUnusedImports setTarget:self];
-            [menuItemFile.submenu addItem:self.menuItemUnusedImports];
-            
-            BOOL findOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"findOn"];
-            if (findOn) {
-                self.menuItemUnusedImports.state = NSOnState;
-            } else {
-                self.menuItemUnusedImports.state = NSOffState;
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSMenuItem *menuItemFile = [[NSApp mainMenu] itemWithTitle:@"File"];
+            if (menuItemFile) {
+                [menuItemFile.submenu addItem:[NSMenuItem separatorItem]];
+                self.menuItemUnusedImports = [[NSMenuItem alloc] initWithTitle:@"Find unused imports" action:@selector(menuItemFindUnusedImportsOnClick:) keyEquivalent:@""];
+                [self.menuItemUnusedImports setTarget:self];
+                [menuItemFile.submenu addItem:self.menuItemUnusedImports];
+                
+                BOOL findOn = [[NSUserDefaults standardUserDefaults] boolForKey:@"findOn"];
+                if (findOn) {
+                    self.menuItemUnusedImports.state = NSOnState;
+                } else {
+                    self.menuItemUnusedImports.state = NSOffState;
+                }
+                
+                Class workspaceTabController = NSClassFromString(@"IDEWorkspaceTabController");
+                Method buildMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"buildActiveRunContext:"));
+                Method buildReplaceMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"buildReplaceActiveRunContext:"));
+                method_exchangeImplementations(buildMethod, buildReplaceMethod);
             }
-            
-            Class workspaceTabController = NSClassFromString(@"IDEWorkspaceTabController");
-            Method buildMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"buildActiveRunContext:"));
-            Method buildReplaceMethod = class_getInstanceMethod(workspaceTabController, NSSelectorFromString(@"buildReplaceActiveRunContext:"));
-            method_exchangeImplementations(buildMethod, buildReplaceMethod);
-        }
+
+        }];
     }
     return self;
 }
